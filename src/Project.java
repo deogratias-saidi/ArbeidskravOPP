@@ -8,7 +8,8 @@ public class Project implements Comparable {
     private double overheadPercent = .10, overheadAmount;
     private LocalDate startDate, endDate;
 
-    public Project(String projectName, String customer, Address projectAddress, LocalDate startDate, LocalDate endDate) {
+    public Project(String projectName, String customer, Address projectAddress, LocalDate startDate,
+                   LocalDate endDate) {
         this.projectName = projectName;
         this.projectAddress = projectAddress;
         this.startDate = startDate;
@@ -56,7 +57,7 @@ public class Project implements Comparable {
                 System.out.println("Carpenter: ");
             System.out.println(w.firstName + " " + w.lastName + "\n" + "ID name: " + w.idNumber + "\n"
                     + w.address.toString() + "\nHourly Rate: " + w.hourlyRate
-                    + "\nHours worked: " + w.hoursWorked + "\nTotal Compensation: Kr "
+                    + "\nHours worked: " + w.hoursWorked + "\nTotal Compensation: $"
                     + w.hourlyRate * w.hoursWorked + "\n============================" + "\n");
         }
     }
@@ -81,8 +82,8 @@ public class Project implements Comparable {
         for (Worker w : workers) {
             projectDetails += w.toString() + "\n\n";
         }
-        projectDetails += "Project Total: Kr %.2f\n";
-        projectDetails += "Contractor Overhead: Kr %.2f\n";
+        projectDetails += "Project Total: $%.2f\n";
+        projectDetails += "Contractor Overhead: $%.2f\n";
         return projectDetails;
 
     }
