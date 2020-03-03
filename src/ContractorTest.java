@@ -8,11 +8,11 @@ public class ContractorTest {
 
         LocalDate start1 = LocalDate.parse("2020-02-02");
         LocalDate end1 = LocalDate.parse("2020-11-02");
-        Project project1 = new Project("Bolig", "Ibrahim Jusu", client1, start1, end1);
+        Project project1 = new Project("House", "Ibrahim Jusu", client1, start1, end1);
 
         LocalDate start2 = LocalDate.parse("2020-10-03");
         LocalDate end2 = LocalDate.parse("2020-11-02");
-        Project project2 = new Project("Skole", "Oslo Skole", client2, start2, end2);
+        Project project2 = new Project("Motion Lighting", "Oslo Skole", client2, start2, end2);
 
         Address eAddress = new Address("Lysaker Torg 5", 1346, "Lysaker", "Viken");
         Address cAddress = new Address("Lysaker Torg 10", 1348, "Lysaker", "Viken");
@@ -27,8 +27,8 @@ public class ContractorTest {
         workers.add(e);
         workers.add(c);
         workers.add(p);
-        ((Electrician)e).setWiringCost(400);
-        ((Carpenter)c).setLumberCost(600);
+        ((Electrician)e).setWiringCost(1500);
+        ((Carpenter)c).setLumberCost(2000);
         ((Plumber)p).setPlumbingCost(1000);
         project1.addWorkers(workers);
         project1.setOverhead(.18);
