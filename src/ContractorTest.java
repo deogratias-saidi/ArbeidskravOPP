@@ -18,9 +18,9 @@ public class ContractorTest {
         Address cAddress = new Address("Lysaker Torg 10", 1348, "Lysaker", "Viken");
         Address pAddress = new Address("Lysaker Torg 15", 1350, "Lysaker", "Viken");
 
-        Worker e = new Electrician("Lionel", "Messi", eAddress, 001, 30, 40);
-        Worker c = new Carpenter("Mohammed", "Salah", cAddress, 002, 25, 35);
-        Worker p = new Plumber("Eden", "Hazard", pAddress, 003, 23, 34);
+        Worker e = new Electrician("Lionel", "Messi", eAddress, 001, 70, 40);
+        Worker c = new Carpenter("Mohammed", "Salah", cAddress, 002, 60, 35);
+        Worker p = new Plumber("Eden", "Hazard", pAddress, 003, 50, 34);
 
         ArrayList<Worker> workers = new ArrayList<>();
 
@@ -38,8 +38,8 @@ public class ContractorTest {
 
         workers.remove(p);
         workers.remove(c);
-        ((Electrician)e).setWiringCost(200);
-        workers.get(0).setHoursWorked(20);
+        ((Electrician)e).setWiringCost(250);
+        workers.get(0).setHoursWorked(70);
         project2.addWorkers(workers);
         System.out.printf(project2.toString(),project2.getName(), project2.getTotalCost(), project2.getOverhead());
 
@@ -48,7 +48,7 @@ public class ContractorTest {
         }else{
             System.out.println("\nThe " + project1.getName() + " project is scheduled before " + project2.getName());
         }
-        System.out.println("\n");
+        System.out.println();
         project1.printPayroll();
     }
 }

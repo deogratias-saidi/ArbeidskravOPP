@@ -28,7 +28,7 @@ public class Worker {
 
     @Override
     public String toString(){
-        return firstName + " " + lastName + "\nCompensation " + calculatePay();
+        return firstName + " " + lastName + "\nCompensation $" + calculatePay();
     }
 
 }
